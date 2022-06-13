@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bluetoothprint.MainPage">
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+            <StackLayout HorizontalOptions="Center" >
+                <RadioButton x:Name="boletaA" Margin="0,0,5,0" IsChecked="true" Content="Boleta Afecta" BorderColor="Transparent" BackgroundColor="Transparent" TextColor="Black" />
+                <RadioButton x:Name="boletaE" Margin="5,0,0,0" IsChecked="false" Content="Boleta Exenta" BorderColor="Transparent" BackgroundColor="Transparent" TextColor="Black" />
+                <RadioButton x:Name="facturaA" Margin="0,0,5,0" IsChecked="False" Content="Factura Afecta" BorderColor="Transparent" BackgroundColor="Transparent" TextColor="Black" />
+                <RadioButton x:Name="facturaE" Margin="5,0,0,0" IsChecked="false" Content="Factura Exenta" BorderColor="Transparent" BackgroundColor="Transparent" TextColor="Black" />
+            </StackLayout>
+
+            <Picker Margin="0,20,0,20" x:Name="deviceList"
+                            Title="Select Device"
+                    SelectedIndexChanged="deviceList_SelectedIndexChanged"
+                            FontSize="20"
+                            />
+
+            <Button Clicked="Button_Clicked" Text="Imprimir" HorizontalOptions="Center" VerticalOptions="Center" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
